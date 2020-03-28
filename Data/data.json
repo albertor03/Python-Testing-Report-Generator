@@ -1,0 +1,42 @@
+[
+  {
+    "Application": "Report Application",
+    "Environment": "Dev",
+    "Id":  "test_001",
+    "Test-Case": "Test 001",
+    "Browser": "Firefox",
+    "Result": "Passed",
+    "Error": []
+  },
+  {
+    "Application": "Report Application",
+    "Environment": "Dev",
+    "Id":  "test_002",
+    "Test-Case": "Test 002",
+    "Browser": "Internet Explorer",
+    "Result": "Skipped",
+    "Error": [{
+      "Reason": "Browser not found"
+    }]
+  },
+  {
+    "Application": "Report Application",
+    "Environment": "Dev",
+    "Id":  "test_001",
+    "Test-Case": "Test 001",
+    "Browser": "Firefox",
+    "Result": "Failed",
+    "Error": [
+      {
+        "Assert": "Assert 1",
+        "Error-Description": "Something Failed",
+        "Screenshot": [
+          {
+            "Name": "Screenshot-1.png",
+            "Url": ""
+          }
+        ]
+      }
+    ]
+  }
+]
