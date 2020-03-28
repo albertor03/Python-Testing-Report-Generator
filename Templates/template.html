@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Report Generator Python</title>
+</head>
+<body>
+    <div class="container-fluid col-12">
+        <p class="text-right fond-weight-bold">date</p>
+
+        <table class="table table-sm text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Application</th>
+                    <th scope="col">Environment</th>
+                    <th scope="col">Test Case</th>
+                    <th scope="col">Browser</th>
+                    <th scope="col">Result</th>
+                    <th scope="col">Error Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Application Name</td>
+                    <td>Env Name</td>
+                    <td>Test Cases Name</td>
+                    <td>Browser Name</td>
+                    <td>Passed</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Application Name</td>
+                    <td>Env Name</td>
+                    <td>Test Cases Name</td>
+                    <td>Browser Name</td>
+                    <td>Skipped</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Application Name</td>
+                    <td>Env Name</td>
+                    <td>Test Cases Name</td>
+                    <td>Browser Name</td>
+                    <td>Failed</td>
+                    <td><a href="#">View Errors</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div class="col-3">
+            <table class="table table-sm table-striped text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Status</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Passed</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Skipped</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Failed</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th>3</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <table class="table table-sm text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th colspan="3">Test Cases Name</th>
+                </tr>
+                <tr>
+                    <th scope="col">Assert</th>
+                    <th scope="col">Errors</th>
+                    <th scope="col">Screenshot</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Assert Name</td>
+                    <td>Error Description</td>
+                    <td><a href="#">Screenshot Name</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
