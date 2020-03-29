@@ -1,6 +1,5 @@
 [
   {
-    "Number": 0,
     "Application": "Report Application",
     "Environment": "Dev",
     "Id":  "test_001",
@@ -10,7 +9,6 @@
     "Error": []
   },
   {
-    "Number": 1,
     "Application": "Report Application",
     "Environment": "Dev",
     "Id":  "test_002",
@@ -22,7 +20,6 @@
     }]
   },
   {
-    "Number": 2,
     "Application": "Report Application",
     "Environment": "Dev",
     "Id":  "test_003",

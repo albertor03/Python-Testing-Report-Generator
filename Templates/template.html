@@ -24,7 +24,7 @@
             <tbody>
                 {% for result in results %}
                     <tr>
-                        <th scope="row">{{result['Number'] + 1}}</th>
+                        <th scope="row">{{loop.index}}</th>
                         <td>{{result['Application']}}</td>
                         <td>{{result['Environment']}}</td>
                         <td>{{result['Test-Case']}}</td>
