@@ -45,7 +45,7 @@
         </table>
         <br>
         <div class="col-3">
-            <table class="table table-sm table-striped text-center">
+            <table id="tableSummary" class="table table-sm table-striped text-center">
                 <thead>
                     <tr>
                         <th scope="col">Status</th>
@@ -55,19 +55,19 @@
                 <tbody>
                     <tr>
                         <td>Passed</td>
-                        <td>1</td>
+                        <td>{{ summary['Passed'] }}</td>
                     </tr>
                     <tr>
                         <td>Skipped</td>
-                        <td>1</td>
+                        <td>{{ summary['Skipped'] }}</td>
                     </tr>
                     <tr>
                         <td>Failed</td>
-                        <td>1</td>
+                        <td>{{ summary['Failed'] }}</td>
                     </tr>
                     <tr>
                         <th>Total</th>
-                        <th>3</th>
+                        <th>{{ total }}</th>
                     </tr>
                 </tbody>
             </table>
