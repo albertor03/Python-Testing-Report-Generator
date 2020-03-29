@@ -35,11 +35,11 @@ class Generator:
     # Render the template with the data
     def template_rendering(self):
         render_template = self.get_template()
-        data = self.report_json
+        results = self.report_json
         date = self.date
         summary = self.get_total_element()
         total = summary['Passed'] + summary['Failed'] + summary['Skipped']
-        template = render_template.render(datas=data, date=date, summary=summary, total=total)
+        template = render_template.render(results=results, date=date, summary=summary, total=total)
         return template
 
     # Generate the pdf file

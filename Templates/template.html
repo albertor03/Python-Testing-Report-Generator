@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Report Generator Python</title>
+    <title>Testing Report Generator</title>
 </head>
 <body>
     <div class="container-fluid col-12">
-        <p class="text-right fond-weight-bold">date</p>
+        <p class="text-right fond-weight-bold">{{date}}</p>
 
-        <table class="table table-sm text-center">
+        <table id="tableResult" class="table table-sm text-center">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
@@ -22,33 +22,25 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Application Name</td>
-                    <td>Env Name</td>
-                    <td>Test Cases Name</td>
-                    <td>Browser Name</td>
-                    <td>Passed</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Application Name</td>
-                    <td>Env Name</td>
-                    <td>Test Cases Name</td>
-                    <td>Browser Name</td>
-                    <td>Skipped</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Application Name</td>
-                    <td>Env Name</td>
-                    <td>Test Cases Name</td>
-                    <td>Browser Name</td>
-                    <td>Failed</td>
-                    <td><a href="#">View Errors</a></td>
-                </tr>
+                {% for result in results %}
+                    <tr>
+                        <th scope="row">{{result['Number'] + 1}}</th>
+                        <td>{{result['Application']}}</td>
+                        <td>{{result['Environment']}}</td>
+                        <td>{{result['Test-Case']}}</td>
+                        <td>{{result['Browser']}}</td>
+                        <td>{{result['Result']}}</td>
+                        <td>
+                            {% if result['Result'] == 'Failed' %} <a href="#{{ result['Id'] }}">View Errors</a>
+                            {% elif result['Result'] == 'Skipped' %}
+                                {% for error in result['Error'] %}
+                                    {{ error['Reason'] }}
+                                {% endfor %}
+                            {% else %}
+                            {% endif %}
+                        </td>
+                    </tr>
+                {%endfor%}
             </tbody>
         </table>
         <br>
