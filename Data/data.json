@@ -46,6 +46,16 @@
             "Url": "#"
           }
         ]
+      },
+      {
+        "Assert": "Assert 3",
+        "Description": "Something Failed",
+        "Screenshot": [
+          {
+            "Name": "Screenshot-3.png",
+            "Url": "#"
+          }
+        ]
       }
     ]
   }

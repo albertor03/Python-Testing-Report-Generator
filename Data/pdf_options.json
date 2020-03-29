@@ -4,7 +4,8 @@
   "margin-right": "0.20in",
   "margin-bottom": "0.20in",
   "margin-left": "0.20in",
-  "orientation": "Landscape",
-  "footer-right": "[page]",
+  "orientation": "Portrait",
+  "footer-right": "[page]/[topage]",
+  "footer-line": "",
   "encoding": "UTF-8"
 }

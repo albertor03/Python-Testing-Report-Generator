@@ -24,7 +24,7 @@ class Generator:
         self.extension = '.pdf'
         self.date = datetime.now().strftime("%a") + " " + datetime.now().strftime("%b") + " " + datetime.now().\
             strftime("%d") + " " + datetime.now().strftime("%Y")
-        self.app = 'Report Generator Python '
+        self.app = 'Python Testing Report Generator  '
 
     # Get the html template
     def get_template(self):
@@ -39,7 +39,7 @@ class Generator:
         date = self.date
         summary = self.get_total_element()
         total = summary['Passed'] + summary['Failed'] + summary['Skipped']
-        template = render_template.render(results=results, date=date, summary=summary, total=total)
+        template = render_template.render(title=self.app, results=results, date=date, summary=summary, total=total)
         return template
 
     # Generate the pdf file
